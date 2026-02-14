@@ -9,11 +9,9 @@
     <meta property="og:title" content="Crypto Perpetual Liquidation Calculator">
     <meta property="og:description" content="Calculate your liquidation price and risk for crypto perpetual futures trading. Free tool for Bitcoin, Ethereum, and all cryptocurrency derivatives.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://example.com/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Crypto Perpetual Liquidation Calculator">
     <meta name="twitter:description" content="Calculate your liquidation price and risk for crypto perpetual futures trading instantly.">
-    <link rel="canonical" href="https://example.com/crypto-liquidation-calculator">
     <style>
         * {
             margin: 0;
@@ -55,6 +53,60 @@
             color: #8a8a8a;
             font-size: 1rem;
             margin-bottom: 20px;
+        }
+
+        .affiliate-banner {
+            background: linear-gradient(135deg, #1a1d29 0%, #252836 100%);
+            border: 2px solid #00ffcc;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .affiliate-banner h3 {
+            color: #00ffcc;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        .affiliate-banner p {
+            color: #b0b0b0;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .affiliate-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .affiliate-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #00ffcc 0%, #00d9b3 100%);
+            color: #0f1117;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .affiliate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 204, 0.4);
+        }
+
+        .affiliate-btn.secondary {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: #fff;
         }
 
         .main-content {
@@ -239,6 +291,26 @@
             color: #0f1117;
         }
 
+        .trading-cta {
+            background: linear-gradient(135deg, #252836 0%, #1a1d29 100%);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid #00ffcc33;
+        }
+
+        .trading-cta h4 {
+            color: #00ffcc;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .trading-cta p {
+            color: #b0b0b0;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
         .info-section {
             margin-top: 50px;
         }
@@ -283,6 +355,13 @@
             border-top: 1px solid #2a2d39;
             color: #8a8a8a;
             font-size: 0.9rem;
+        }
+
+        .footer-disclaimer {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #6a6a6a;
+            font-style: italic;
         }
 
         .error-message {
@@ -352,6 +431,10 @@
                 opacity: 1;
             }
         }
+
+        .exchange-logo {
+            font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
@@ -363,6 +446,22 @@
     </header>
 
     <main class="container">
+        <!-- Affiliate Banner -->
+        <div class="affiliate-banner">
+            <h3>🚀 Ready to Start Trading?</h3>
+            <p>Use these trusted platforms for crypto perpetual futures trading with low fees and high liquidity</p>
+            <div class="affiliate-buttons">
+                <a href="https://www.binance.com/referral/earn-together/refer2earn-usdc/claim?hl=en&ref=GRO_28502_QZZOU&utm_source=default" target="_blank" rel="noopener" class="affiliate-btn">
+                    <span class="exchange-logo">🟡</span>
+                    Trade on Binance
+                </a>
+                <a href="https://www.bybit.com/invite?ref=K7AXDNQ" target="_blank" rel="noopener" class="affiliate-btn secondary">
+                    <span class="exchange-logo">🟠</span>
+                    Trade on Bybit
+                </a>
+            </div>
+        </div>
+
         <div class="main-content">
             <div class="card">
                 <h2>Calculator</h2>
@@ -445,8 +544,9 @@
     </main>
 
     <footer>
-    <p>&copy; 2026 Crypto Liquidation Calculator | Built by Houari Boulares</p>
-    <p>For educational purposes only. Not financial advice. Always trade responsibly.</p>
+        <p>&copy; 2026 Crypto Liquidation Calculator | Built by Houari Boulares</p>
+        <p>For educational purposes only. Not financial advice. Always trade responsibly.</p>
+        <p class="footer-disclaimer">This site contains affiliate links. We may earn a commission if you sign up through our links at no extra cost to you.</p>
     </footer>
 
     <div class="toast" id="toast">Copied to clipboard!</div>
@@ -554,6 +654,21 @@
                     </div>
                     
                     ${warningHtml}
+                    
+                    <div class="trading-cta">
+                        <h4>Start Trading with Confidence</h4>
+                        <p>Now that you know your risk, trade on trusted platforms:</p>
+                        <div class="affiliate-buttons">
+                            <a href="YOUR_BINANCE_REFERRAL_LINK" target="_blank" rel="noopener" class="affiliate-btn">
+                                <span class="exchange-logo">🟡</span>
+                                Binance
+                            </a>
+                            <a href="YOUR_BYBIT_REFERRAL_LINK" target="_blank" rel="noopener" class="affiliate-btn secondary">
+                                <span class="exchange-logo">🟠</span>
+                                Bybit
+                            </a>
+                        </div>
+                    </div>
                     
                     <button class="btn-copy" id="copyBtn">📋 Copy Results</button>
                 </div>
